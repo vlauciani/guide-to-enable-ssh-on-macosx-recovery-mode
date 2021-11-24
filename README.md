@@ -14,9 +14,9 @@ Use Pubkey authentication!
 rdsize=$((16*1024*1024/512)) # 16 megabytes
 dev=`hdik -drivekey system-image=yes -nomount "ram://$rdsize"`
 echo $?; echo $dev # check for errors!
-newfs_hfs "$dev"
+newfs_hfs $dev
 eval `/usr/bin/stat -s /var/root` # store perms for old mountponit
-mount -t hfs -o union -o nobrowse "$dev" /var/root # magic happens here
+mount -t hfs -o union -o nobrowse $dev /var/root # magic happens here
 chown "$st_uid:$st_gid" /var/root
 chmod "$st_mode" /var/root
 ```
@@ -25,6 +25,21 @@ Next, add your key to `/var/root/.ssh/authorized_keys`.
 ```
 mkdir /var/root/.ssh
 vim /var/root/.ssh/authorized_keys
+```
+
+### Generate SSH KEY for the server
+```
+ssh-keygen -t rsa
+```
+
+### Runs sshd
+```
+/usr/sbin/sshd -d -o UsePAM=no -h /var/root/.ssh/id_rsa
+```
+
+### Connect from client
+```
+ssh root@<ip>
 ```
 
 ## References
