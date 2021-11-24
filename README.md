@@ -44,3 +44,5 @@ ssh root@<ip>
 
 ## References
 - https://bennettp123.com/2014/06/09/os-x-recovery-shenanigans/
+- https://www.ssh.com/academy/ssh/sshd
+- https://itectec.com/askdifferent/macos-how-to-open-the-sshd-service/
