@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/vlauciani/guide-to-enable-ssh-on-macosx-recovery-mode/blob/main/LICENSE)
+
 # Guide to enable ssh on macOSX Recovery Mode
 
 ### Boot in recovery mode
@@ -42,7 +44,18 @@ ssh-keygen -t rsa
 ssh root@<ip>
 ```
 
+## Contribute
+Thanks to your contributions!
+
+Here is a list of users who already contributed to this repository:
+<a href="https://github.com/vlauciani/gitlabci-include-for-dockerhub-rate-limit/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=vlauciani/gitlabci-include-for-dockerhub-rate-limit" />
+</a>
+
 ## References
 - https://bennettp123.com/2014/06/09/os-x-recovery-shenanigans/
 - https://www.ssh.com/academy/ssh/sshd
 - https://itectec.com/askdifferent/macos-how-to-open-the-sshd-service/
+
+## Author
+(c) 2021 Valentino Lauciani vlauciani[at]gmail.com
